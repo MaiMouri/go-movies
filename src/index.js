@@ -11,6 +11,7 @@ import GraphQL from './components/GraphQL';
 import Login from './components/Login';
 import Genres from './components/Genres';
 import Movie from './components/Movie';
+import OneGenre from './components/OneGenre';
 
 const router = createBrowserRouter([
   {
@@ -32,8 +33,12 @@ const router = createBrowserRouter([
         element: <Genres />,
       },
       {
-        path: "/admin/movie/0",
-        element: <EditMovie />,
+        path: "/genres",
+        element: <Genres />,
+      },
+      {
+        path: "/genres/:id",
+        element: <OneGenre />,
       },
       {
         path: "/admin/movie/:id",
